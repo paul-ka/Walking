@@ -1,25 +1,21 @@
 // WALKER CONTROLLER
 function walkersController($scope, $http, walkersService) {
     $scope.title = "Les amis";
-
-    $scope.restrictions = [];
-
+    $scope.walker = {};
+    
     function load() {
         walkersService.get().then(function (res) {
             $scope.walkers = res.data;
         });
 
     }
+    
 
     $scope.add = function () {
-        var data = {};
-        data.description = $scope.description;
-        data.date = $scope.date;
-        data.image = $scope.imageFile;
-        walkersService.create(data).then(function (res) {
+        walkersService.create($scope.walker).then(function (res) {
             load();
         });
-        $scope.description = "";
+        $scope.name = "";
         $scope.date = "";
         $scope.imageFile = "";
         location.reload();
@@ -38,7 +34,7 @@ function walkersController($scope, $http, walkersService) {
         var reader = new FileReader();
         reader.onloadend = function () {
             preview.src = reader.result;
-            $scope.imageFile = reader.result;
+            $scope.walker.imageFile = reader.result;
         }
         if (file) {
             reader.readAsDataURL(file);

@@ -6,10 +6,11 @@ h1{
 }
 body{
     background-image: url("/img/background.jpg");
-    background-repeat:no-repeat;
-    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 100%;
     width: 100%;
     color: white;
+    background-attachment: fixed;
 }
 
 .nav-content{
@@ -47,6 +48,34 @@ body{
     font-size: bold;
     text-align: center;    
 }
+
+
+
+.list-group-item{
+    background-color: rgba(36,36,36, 0.8); 
+    width: 300px;
+    margin: 10px;
+    border-radius: 5px 10px 10px 5px;
+    text-align: center;
+    padding: 15px;
+}
+.imgAdd{
+    width: 150px;
+}
+   
+/*
+    border-radius: 5px 10px 10px 5px;
+    padding: 20px;
+    color: white;
+*/
+}
+
+.form-inline{
+    background-color: rgba(36,36,36, 0.8); 
+    padding: 0 auto;
+    position: absolute;
+}
+
 
 #kml-zone{
     height: 100%;

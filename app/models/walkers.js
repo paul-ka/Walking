@@ -6,7 +6,8 @@ var walkersSchema = new mongoose.Schema({
   name: String,
   email: String,
   phone: String,
-  difficulty: String
+  experience: String,
+  imageFile: String
 });
 
 var Walkers = {
@@ -14,10 +15,8 @@ var Walkers = {
     model: mongoose.model('Walkers', walkersSchema),
     
     create: function(req, res) {
-		Walkers.model.create({
-			description: req.body.description
-		}, function(){
-			res.sendStatus(200);
+		Walkers.model.create(req.body, function (){
+		  res.sendStatus(200);
 		})
 	},
 
@@ -28,9 +27,8 @@ var Walkers = {
 	},
 
 	update: function(req, res){
-		Walkers.model.findByIdAndUpdate(req.params.id, {
-			description: req.body.description
-		}, function(){
+        console.log(req.body);
+		Walkers.model.findByIdAndUpdate(req.params.id, req.body, function (){
 			res.sendStatus(200);
 		})
 	},
