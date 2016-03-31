@@ -2,16 +2,19 @@
 var mongoose = require('mongoose');
 
 
-var todoSchema = new mongoose.Schema({
-  description: String
+var walkerSchema = new mongoose.Schema({
+  name: String,
+  email: String,
+  phone: String,
+  difficulty: String
 });
 
-var Todo = {
+var Walker = {
     
-    model: mongoose.model('Todo', todoSchema),
+    model: mongoose.model('Walker', walkerSchema),
     
     create: function(req, res) {
-		Todo.model.create({
+		Walker.model.create({
 			description: req.body.description
 		}, function(){
 			res.sendStatus(200);
@@ -19,13 +22,13 @@ var Todo = {
 	},
 
 	findAll: function(req, res) {
-		Todo.model.find(function (err, data) {
+		Walker.model.find(function (err, data) {
 			res.send(data);
 		});
 	},
 
 	update: function(req, res){
-		Todo.model.findByIdAndUpdate(req.params.id, {
+		Walker.model.findByIdAndUpdate(req.params.id, {
 			description: req.body.description
 		}, function(){
 			res.sendStatus(200);
@@ -33,10 +36,10 @@ var Todo = {
 	},
 
 	delete: function(req, res){
-		Todo.model.findByIdAndRemove(req.params.id, function(){
+		Walker.model.findByIdAndRemove(req.params.id, function(){
 			res.sendStatus(200);
 		})
 	} 
 }
 
-module.exports = Todo;
+module.exports = Walker;
