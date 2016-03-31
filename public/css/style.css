@@ -97,4 +97,8 @@ body{
     border-radius: 5px 10px 10px 5px;
     padding: 20px;
     color: white;
+
+}
+#kml-zone-map {
+    height: 600px;
 }

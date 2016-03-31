@@ -1,9 +1,22 @@
 <h1>{{title}}</h1>
 
   <div id="kml-zone">
-    <div id="kml-map"></div>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAamy-iuBFyQu-qNuihVdTQDCPyaqzrUac&callback=initMap"
-    async defer></script>
+   <ng-map zoom="11" center="41.875696,-87.624207">
+        <kml-layer url="http://www.google.com/maps/d/kml?mid=z4t2qn7YIVEQ.kA0ng124KU8Q">
+        </kml-layer>
+      </ng-map>
   </div>
 
-<!-- clé API Google : AIzaSyAamy-iuBFyQu-qNuihVdTQDCPyaqzrUac -->
+<!--
+
+
+    <ng-map center="48.55, 1.027" id="kml-zone-map">
+
+    <kml-layer url="http://localhost:8000/kml/doc.kml">
+    </kml-layer>
+
+    </ng-map>
+
+ clé API Google : AIzaSyAamy-iuBFyQu-qNuihVdTQDCPyaqzrUac 
+
+-->
