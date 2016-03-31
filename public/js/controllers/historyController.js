@@ -1,6 +1,6 @@
 // MAIN CONTROLLER
 function historyController($scope, $http, historyService) {
-	$scope.title = "Historique";
+	$scope.title = "L'historique";
 	
 	function load(){
 		historyService.get().then(function(res){

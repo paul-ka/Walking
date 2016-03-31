@@ -1,6 +1,6 @@
 // MAIN CONTROLLER
 function walkersController($scope, $http, walkersService) {
-	$scope.title = "Marcheurs";
+	$scope.title = "Les amis";
 	
 	function load(){
 		walkersService.get().then(function(res){

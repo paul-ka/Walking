@@ -5,11 +5,11 @@ function config($routeProvider) {
 			controller: 'circuitController'
 		})
 		.when('/walkers', {
-			templateUrl: 'views/walkers.html'
+			templateUrl: 'views/walkers.html',
 			controller: 'walkersController'
 		})
 		.when('/history', {
-			templateUrl: 'views/history.html'
+			templateUrl: 'views/history.html',
 			controller: 'historyController'
 		})
 		.when('/kml', {
