@@ -1,20 +1,20 @@
-// MODEL TODO
+// MODEL WALKER
 var mongoose = require('mongoose');
 
 
-var walkerSchema = new mongoose.Schema({
+var walkersSchema = new mongoose.Schema({
   name: String,
   email: String,
   phone: String,
   difficulty: String
 });
 
-var Walker = {
+var Walkers = {
     
-    model: mongoose.model('Walker', walkerSchema),
+    model: mongoose.model('Walkers', walkersSchema),
     
     create: function(req, res) {
-		Walker.model.create({
+		Walkers.model.create({
 			description: req.body.description
 		}, function(){
 			res.sendStatus(200);
@@ -22,13 +22,13 @@ var Walker = {
 	},
 
 	findAll: function(req, res) {
-		Walker.model.find(function (err, data) {
+		Walkers.model.find(function (err, data) {
 			res.send(data);
 		});
 	},
 
 	update: function(req, res){
-		Walker.model.findByIdAndUpdate(req.params.id, {
+		Walkers.model.findByIdAndUpdate(req.params.id, {
 			description: req.body.description
 		}, function(){
 			res.sendStatus(200);
@@ -36,10 +36,10 @@ var Walker = {
 	},
 
 	delete: function(req, res){
-		Walker.model.findByIdAndRemove(req.params.id, function(){
+		Walkers.model.findByIdAndRemove(req.params.id, function(){
 			res.sendStatus(200);
 		})
 	} 
 }
 
-module.exports = Walker;
+module.exports = Walkers;

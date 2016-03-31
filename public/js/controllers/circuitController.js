@@ -4,7 +4,7 @@ function circuitController($scope, $http, circuitService) {
 	
 	function load(){
 		circuitService.get().then(function(res){
-			$scope.circuits = res.data;
+			//$scope.circuits = res.data;
 		});
 	}
 	$scope.add = function(){

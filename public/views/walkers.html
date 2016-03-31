@@ -1,22 +1,102 @@
 <h1>{{title}}</h1>
-<form class="form-inline">
-	<div class="form-group">
-		<input type="text" class="form-control" id="inputMessage" 
-			   placeholder="Your task" ng-model="description">
-	</div>
-	<button type="submit" class="btn btn-default" ng-click="add()">Add</button>
-</form>
+
+<div class="header">
+
+</div>
+
+
+<div class="container">
+<!--    <div class="row" style="text-align:center;">-->
+       <div class="row">
+        <div class="addWalkersField">
+            <button type="button" class="btn btn-info btn-lg modal-add-btn" data-toggle="modal" data-target="#myModal">Ajouter un ami</button>
+        </div>
+        <div class="walkers-field">
+            <h2> Chercher un ami</h2>
+            <div class="searchingwalkers">
+                <input class="searchInput" type="text" ng-model="query" placeholder="Entrer nom d'ami" />
+                <select ng-model="order" class="orderBy" style="color:black;">
+                    <option value="" disabled selected hidden>Trier par</option>
+                    <option value="description">Organiser par nom</option>
+                    <option value="description">Organiser par date</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Ajouter un ami</h4>
+            </div>
+            <div class="modal-body">
+                <div style="text-align:center;">
+                    <form>
+                        <input class="parcourir" type='file' ng-model='imageFile' base-sixty-four-input onchange="angular.element(this).scope().previewFile(this)">
+                    </form>
+                    <img id="preview" style="margin-top:30px;" src="{{walkers.image || './public/img/logo.png'}}">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-default addbutton1" ng-click="add()" style="float:right;">Ajouter</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Annuler</button>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<br> 
+
+<!-- Liste des amis 
 <ul class="list-group">
-	<li class="list-group-item" ng-repeat="todo in todos">
-		<form class="form-inline">
-			<div class="form-group">
-				<input type="text" class="form-control" id="inputMessage" 
-					   ng-model="todo.description">
-			</div>
-			<div class="pull-right">
-				<button type="submit" class="btn btn-default" ng-click="update(todo)">Update</button>
-				<button type="submit" class="btn btn-danger" ng-click="delete(todo)">Delete</button>
-			</div>
-		</form>
-	</li>
-</ul>
+    <li class="list-group-item" ng-repeat="walker in walkers | filter:{description: query} | orderBy:order">
+        <form class=" form-inline">
+            <div class="form-group secondForm">
+                <img class="imgAdd" src="{{walkers.image || 'http://fanexpodallas.com/wp-content/uploads/550w_soaps_silhouettesm.jpg'}}" />
+                <div class="listInput">
+                    <input type="text" class="form-control secondPart firsttitle firstChild" id="inputMessage" ng-model="walkers.description" placeholder="Prénom">
+                </div>
+                <span class="upDel">
+                    <button type="submit" class="btn btn-default recetteButton" class="btn btn-info btn-lg modal-add-btn" data-toggle="modal" data-target="#{{walkers._id}}">Ami</button>
+                    <button type="submit" class="btn btn-default addbutton1" ng-click="update(walkers)">Mettre à jour</button>
+                    <button type="submit" class="btn btn-danger" ng-click="delete(walkers)">X</button>
+                </span>
+            </div>
+        </form>
+    </li>
+</ul>-->
+
+<!-- Modale fiche amis 
+<div class="modal fade" ng-repeat="walker in walkers | filter:{description: query} | orderBy:order" id="{{walkers._id}}" role="dialog">
+    <div class="modal-dialog modal-lg hmm">
+        <div class="modal-contentwalkers" style="text-align:center;">
+            <div class="modal-header2" ng-style="{'background-image':'url({{walkers.image || 'http://fanexpodallas.com/wp-content/uploads/550w_soaps_silhouettesm.jpg'}})'}">
+                <h2 class="modal-title2">{{walkers.description}}</h2>
+            </div>
+            <div class="modal-body">
+                <!--<ul class="ingList2">
+                    <li> 
+                <div class="row subPart">
+                    <h3>Changer le nom</h3>
+               
+                    <input type="text" class="walkers-form-control" id="walkersinputMessage" ng-model="walkers.description">
+                </div>
+                <div class="row subPart">
+                    <h3>Commentaires</h3>
+                    <input type="text" class="walkers-form-control" id="walkersinputMessage" ng-model="walkers.commentaires">
+                </div>
+                <div class="row subPart">
+                    <h3>date</h3>
+                    <input type="text" class="walkers-form-control" id="walkersinputMessage" ng-model="walkers.date">
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer2" style="text-align:right;">
+            <button type="submit" class="btn btn-default addbutton" ng-click="update(walkers)" data-dismiss="modal">Mettre à jour</button>
+            <button type="button" class="btn btn-default closebutton" data-dismiss="modal">Fermer</button>
+        </div>
+    </div>
+</div>-->

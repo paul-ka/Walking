@@ -12,7 +12,9 @@ body{
     color: white;
 }
 
-
+.nav-content{
+   padding: 10%; 
+}
 .navbar{
     float: left;
     display:list-item;
@@ -35,7 +37,9 @@ body{
 .navbar-header img:hover{
 	transform: translateX(150px);
 } 
-
+.navbar-header img{
+	transition: 7s;
+} 
 
 .nav>li>a{
     color:white;
@@ -43,11 +47,6 @@ body{
     font-size: bold;
     text-align: center;    
 }
-
-
-.navbar-header img{
-	transition: 7s;
-} 
 
 #kml-zone{
     height: 100%;
