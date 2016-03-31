@@ -11,7 +11,7 @@ body{
     list-style-type: none;
     margin: 0;
     padding: 0;
-    width: 10%;
+    width: 150px;
     background-color: rgba(36,36,36, 0.8);
     height: 100%; /* Full height */
     position: fixed; /* Make it stick, even on scroll */
@@ -19,12 +19,16 @@ body{
     
 }
 .navbar-header{
-    width: 10%;
+    width: 120px;
 }
-
-.nav>li>a>img{
+.navbar-header img{
     width: 50px;
 }
+.navbar-header img:hover{
+	transform: translateX(150px);
+} 
+
+
 .nav>li>a{
     color:azure;
     font-family: sans-serif;
@@ -35,10 +39,7 @@ body{
 
 .navbar-header img{
 	transition: 7s;
-}
-.navbar-header img:hover{
-	transform: translateX(300px);
-}  
+} 
 
 #kml-zone{
     height: 100%;
@@ -49,9 +50,7 @@ body{
     height: 100%;
 }
 .bodycontainer{
-    width: 90%;
+    width: 100%;
     height: 100%;
-    display: block;
-    float: right;
-    padding: 40px;overflow:none;
+    margin-left: 160px;
 }
