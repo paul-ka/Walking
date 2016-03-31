@@ -1,5 +1,5 @@
 function config($routeProvider) {
-<<<<<<< HEAD
+
 	$routeProvider
 		.when('/', {
 			templateUrl: 'views/circuit.html',
@@ -20,27 +20,7 @@ function config($routeProvider) {
 		.otherwise({
 			redirectTo: '/'
 		});
-=======
-    $routeProvider
-        .when('/', {
-            templateUrl: 'views/circuit.html',
-            controller: 'circuitController'
-        })
-        .when('/walkers', {
-            templateUrl: 'views/walkers.html',
-            controller: 'walkersController'
-        })
-        .when('/history', {
-            templateUrl: 'views/history.html',
-            controller: 'historyController'
-        })
-        .when('/kml', {
-            templateUrl: 'views/kml.html'
-        })
-        .otherwise({
-            redirectTo: '/'
-        });
->>>>>>> a524cb481781699016b970f558be5531c3252b20
+
 }
 
 function run($rootScope, $location) {
