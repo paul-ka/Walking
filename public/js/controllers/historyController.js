@@ -1,27 +1,27 @@
 // MAIN CONTROLLER
 function historyController($scope, $http, historyService) {
-	$scope.title = "Todo List";
+	$scope.title = "L'historique";
 	
 	function load(){
-		todoService.get().then(function(res){
+		historyService.get().then(function(res){
 			$scope.todos = res.data;
 		});
 	}
 	$scope.add = function(){
 		var data = {};
 		data.description = $scope.description;
-		todoService.create(data).then(function(res){
+		historyService.create(data).then(function(res){
 			load();
 		});
 		$scope.description = "";
 	}
 	$scope.update = function(todo){
-		todoService.update(todo._id, todo).then(function(res){
+		historyService.update(todo._id, todo).then(function(res){
 			load();
 		});
 	}
 	$scope.delete = function(todo){
-		todoService.delete(todo._id).then(function(res){
+		historyService.delete(todo._id).then(function(res){
 			load();
 		});
 	}

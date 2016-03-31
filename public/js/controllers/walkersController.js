@@ -1,27 +1,27 @@
 // MAIN CONTROLLER
 function walkersController($scope, $http, walkersService) {
-	$scope.title = "Todo List";
+	$scope.title = "Les amis";
 	
 	function load(){
-		todoService.get().then(function(res){
+		walkersService.get().then(function(res){
 			$scope.todos = res.data;
 		});
 	}
 	$scope.add = function(){
 		var data = {};
 		data.description = $scope.description;
-		todoService.create(data).then(function(res){
+		walkersService.create(data).then(function(res){
 			load();
 		});
 		$scope.description = "";
 	}
 	$scope.update = function(todo){
-		todoService.update(todo._id, todo).then(function(res){
+		walkersService.update(todo._id, todo).then(function(res){
 			load();
 		});
 	}
 	$scope.delete = function(todo){
-		todoService.delete(todo._id).then(function(res){
+		walkersService.delete(todo._id).then(function(res){
 			load();
 		});
 	}

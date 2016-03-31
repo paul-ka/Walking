@@ -1,5 +1,5 @@
 // TODO SERVICE
-function walkerService($http) {
+function walkersService($http) {
     return {
         get : function() {
             return $http.get('/walker');

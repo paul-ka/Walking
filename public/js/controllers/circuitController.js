@@ -1,27 +1,27 @@
 // MAIN CONTROLLER
 function circuitController($scope, $http, circuitService) {
-	$scope.title = "Todo List";
+	$scope.title = "Circuit";
 	
 	function load(){
-		todoService.get().then(function(res){
+		circuitService.get().then(function(res){
 			$scope.todos = res.data;
 		});
 	}
 	$scope.add = function(){
 		var data = {};
 		data.description = $scope.description;
-		todoService.create(data).then(function(res){
+		circuitService.create(data).then(function(res){
 			load();
 		});
 		$scope.description = "";
 	}
 	$scope.update = function(todo){
-		todoService.update(todo._id, todo).then(function(res){
+		circuitService.update(todo._id, todo).then(function(res){
 			load();
 		});
 	}
 	$scope.delete = function(todo){
-		todoService.delete(todo._id).then(function(res){
+		circuitService.delete(todo._id).then(function(res){
 			load();
 		});
 	}
