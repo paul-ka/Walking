@@ -1,23 +1,134 @@
-<h1>{{title}}</h1>
-<form class="form-inline">
-	<div class="form-group">
-		<input type="text" class="form-control" id="inputMessage" 
-			   placeholder="Your task" ng-model="description">
-	</div>
-	<button type="submit" class="btn btn-default" ng-click="add()">Add</button>
-</form>
-<hr>
-<ul class="list-group">
-	<li class="list-group-item" ng-repeat="todo in todos">
-		<form class="form-inline">
-			<div class="form-group">
-				<input type="text" class="form-control" id="inputMessage" 
-					   ng-model="todo.description">
-			</div>
-			<div class="pull-right">
-				<button type="submit" class="btn btn-default" ng-click="update(todo)">Update</button>
-				<button type="submit" class="btn btn-danger" ng-click="delete(todo)">Delete</button>
-			</div>
-		</form>
-	</li>
-</ul>
+<main class="container main-frame" ng-init="init()">
+    <div class="page-header">
+        <h1>Vos Circuits</h1>
+    </div>
+
+
+    <div class="hide-on-no-js">
+        <!-- search form -->
+        <form class="form-inline" ng-submit="submit()">
+            <input type="text" class="form-control input-lg" placeholder="Entrer nom de ville" ng-model="loc">
+        </form>
+
+        <!-- ajax loader image -->
+        <div ng-show="loader == 1" class="loader"><img src="img/ajax-loader.gif" alt=" "></div>
+
+        <!-- weather report --->
+        <article ng-show="status == 200 && data.cod == 200">
+            <h2>
+						{{data.city.name}}, {{data.city.country}}
+					</h2>
+
+            <table class="table table-striped" style="width:300px; display:inline-block; text-align:center;">
+
+                <tbody>
+                    <tr>
+                        <h1>Aujourd'hui</h1>
+                        <th>Temps</th>
+                        <td>{{data.list[0].weather[0]['main']}} <img ng-src=" {{img}} " alt=""></td>
+
+                    </tr>
+                    <tr>
+                        <th>Température</th>
+                        <td>{{data.list[0].main.temp | customKelvinToCelsiusFilter | number:2}}&deg;C</td>
+                    </tr>
+                    <tr>
+                        <th>Humidité</th>
+                        <td>{{data.list[0].main.humidity}}%</td>
+                    </tr>
+                    <tr>
+                        <th>Vent</th>
+                        <td>{{data.list[0].wind.speed}}mps </td>
+                    </tr>
+                </tbody>
+
+                <tbody>
+                    <tr>
+                        <h1>Demain</h1>
+                        <th>Temps</th>
+                        <td>{{data.list[1].weather[0]['main']}} <img ng-src="{{img}} " alt=" " style="width:35px; margin-left:10px; "></td>
+
+                    </tr>
+                    <tr>
+                        <th>Température</th>
+                        <td>{{data.list[1].main.temp | customKelvinToCelsiusFilter | number:2}}&deg;C</td>
+                    </tr>
+                    <tr>
+                        <th>Humidité</th>
+                        <td>{{data.list[1].main.humidity}}%</td>
+                    </tr>
+                    <tr>
+                        <th>Vent</th>
+                        <td>{{data.list[1].wind.speed}}mps </td>
+                    </tr>
+                </tbody>
+                <h1>Après demain</h1>
+                <tbody>
+                    <tr>
+                        <th>Temps</th>
+                        <td>{{data.list[2].weather[0]['main']}} <img ng-src="{{img}} " alt=" " style="width:35px; margin-left:10px; "></td>
+
+                    </tr>
+                    <tr>
+                        <th>Température</th>
+                        <td>{{data.list[2].main.temp | customKelvinToCelsiusFilter | number:2}}&deg;C</td>
+                    </tr>
+                    <tr>
+                        <th>Humidité</th>
+                        <td>{{data.list[2].main.humidity}}%</td>
+                    </tr>
+                    <tr>
+                        <th>Vent</th>
+                        <td>{{data.list[2].wind.speed}}mps </td>
+                    </tr>
+                </tbody>
+                <h1>J+3</h1>
+                <tbody>
+                    <tr>
+                        <th>Temps</th>
+                        <td>{{data.list[3].weather[0]['main']}} <img ng-src="{{img}} " alt=" " style="width:35px; margin-left:10px; "></td>
+
+                    </tr>
+                    <tr>
+                        <th>Température</th>
+                        <td>{{data.list[3].main.temp | customKelvinToCelsiusFilter | number:2}}&deg;C</td>
+                    </tr>
+                    <tr>
+                        <th>Humidité</th>
+                        <td>{{data.list[3].main.humidity}}%</td>
+                    </tr>
+                    <tr>
+                        <th>Vent</th>
+                        <td>{{data.list[3].wind.speed}}mps </td>
+                    </tr>
+                </tbody>
+                <h1>J+4</h1>
+                <tbody>
+                    <tr>
+                        <th>Temps</th>
+                        <td>{{data.list[4].weather[0]['main']}} <img ng-src="{{img}} " alt=" " style="width:35px; margin-left:10px; "></td>
+
+                    </tr>
+                    <tr>
+                        <th>Température</th>
+                        <td>{{data.list[4].main.temp | customKelvinToCelsiusFilter | number:2}}&deg;C</td>
+                    </tr>
+                    <tr>
+                        <th>Humidité</th>
+                        <td>{{data.list[4].main.humidity}}%</td>
+                    </tr>
+                    <tr>
+                        <th>Vent</th>
+                        <td>{{data.list[4].wind.speed}}mps </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </article>
+
+
+
+        <!-- ajax response -->
+        <!-- <pre ng-show="data ">{{data}}</pre> -->
+    </div>
+</main>
