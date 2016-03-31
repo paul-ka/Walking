@@ -1,11 +1,16 @@
 function config($routeProvider) {
 	$routeProvider
 		.when('/', {
-			templateUrl: 'views/main.html',
-			controller: 'mainController'
+			templateUrl: 'views/circuit.html',
+			controller: 'circuitController'
 		})
-		.when('/about', {
-			templateUrl: 'views/about.html'
+		.when('/walkers', {
+			templateUrl: 'views/walkers.html'
+			controller: 'walkersController'
+		})
+		.when('/history', {
+			templateUrl: 'views/history.html'
+			controller: 'historyController'
 		})
 		.otherwise({
 			redirectTo: '/'
@@ -19,8 +24,12 @@ function run($rootScope, $location){
 }
 angular.module('app', ['ngRoute'])
     .config(config)
-    .controller('mainController', mainController)
-    .service('todoService', todoService)
+    .controller('circuitController', circuitController)
+    .controller('walkersController', walkersController)
+    .controller('historyController', historyController)
+    .service('circuitService', circuitService)
+    .service('walkersService', walkersService)
+    .service('historyService', historyService)
     /*.factory('', )*/
     .run(run);
 
