@@ -13,7 +13,8 @@ function config($routeProvider) {
 			controller: 'historyController'
 		})
 		.when('/kml', {
-			templateUrl: 'views/kml.html'
+			templateUrl: 'views/kml.html',
+			controller: 'kmlController'
 		})
 		.otherwise({
 			redirectTo: '/'
@@ -25,11 +26,12 @@ function run($rootScope, $location){
 		$rootScope.activetab = newVal;
 	});
 }
-angular.module('app', ['ngRoute'])
+angular.module('app', ['ngRoute', 'ngMap'])
     .config(config)
     .controller('circuitController', circuitController)
     .controller('walkersController', walkersController)
     .controller('historyController', historyController)
+    .controller('kmlController', kmlController)
     .service('circuitService', circuitService)
     .service('walkersService', walkersService)
     .service('historyService', historyService)

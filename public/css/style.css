@@ -53,5 +53,10 @@ body{
     height: 100%;
     display: block;
     float: right;
-    padding: 40px;overflow:none;
+    padding: 40px;
+    margin-left: 180px;
+    overflow:none;
+}
+#kml-zone-map {
+    height: 600px;
 }
