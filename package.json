@@ -1,0 +1,27 @@
+{
+  "name": "sunwalk",
+  "version": "1.0.0",
+  "description": "Walking organisation",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/paul-ka/Walking.git"
+  },
+  "author": "WCS",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/paul-ka/Walking/issues"
+  },
+  "homepage": "https://github.com/paul-ka/Walking#readme",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "method-override": "^2.3.5",
+    "mongoose": "^4.4.10",
+    "morgan": "^1.7.0"
+  }
+}
