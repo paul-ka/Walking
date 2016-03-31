@@ -19,7 +19,7 @@ function historyController($scope, $http, historyService) {
         $scope.status = null;
 
         // fire ajax request to get weather report for selected location
-        $http.get('http://api.openweathermap.org/data/2.5/weather?q=' + $scope.loc + '&appid=a9bfa08d7c9a72603190225b4f255c70')
+        $http.get('http://api.openweathermap.org/data/2.5/forecast?q=' + $scope.loc + '&appid=a9bfa08d7c9a72603190225b4f255c70')
 
         // the ajax request was successful
         .success(function (data, status) {
@@ -34,7 +34,7 @@ function historyController($scope, $http, historyService) {
             if (data.cod == 200) {
 
                 // build image url
-                $scope.img = 'http://openweathermap.org/img/w/' + data.weather[0]['icon'] + '.png';
+                $scope.img = 'http://openweathermap.org/img/w/' + data.list[0].weather[0]['icon'] + '.png';
 
                 // the selected location was not found
             } else {
