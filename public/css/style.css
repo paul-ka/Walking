@@ -4,7 +4,9 @@ body{
     width: 100%;
 }
 
-
+.container{
+    width:180px;
+}
 .navbar{
     float: left;
     display:list-item;
@@ -19,7 +21,7 @@ body{
     
 }
 .navbar-header{
-    width: 10%;
+    width: 70%;
 }
 
 .nav>li>a>img{

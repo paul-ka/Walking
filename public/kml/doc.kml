@@ -1,0 +1,242 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<kml xmlns='http://www.opengis.net/kml/2.2'>
+	<Document>
+		<name>Tour du Mont Blanc or TMB</name>
+		<description><![CDATA[This is the route for our 6 day Tour du Mont Blanc trip or TMB. Tailor made options which walk the entire length of the circuit are available, but often clients prefer to do this in one week. ]]></description>
+		<Folder>
+			<name>Untitled layer</name>
+			<Placemark>
+				<name>Placemark 1</name>
+				<description><![CDATA[Yeti Lodge (http://www.yetilodge.com/) in Argentiere is our usual base for the beginning and end of this trip.]]></description>
+				<styleUrl>#icon-163</styleUrl>
+				<Point>
+					<coordinates>6.925163,45.97919,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Line 1</name>
+				<styleUrl>#line-0000FF-5-nodesc</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>6.9258500000000005,45.980741,0.0 6.869888,45.925603,0.0 6.822853,45.898132,0.0 6.796761,45.890008,0.0 6.781483,45.87399500000001,0.0 6.779594,45.858695,0.0 6.768608,45.85176,0.0 6.758308,45.842314,0.0 6.751099,45.837291,0.0 6.739941,45.831431,0.0 6.739941,45.826527,0.0 6.734619,45.829158,0.0 6.727409,45.821143,0.0 6.726208,45.810735,0.0 6.711102000000001,45.78799600000001,0.0 6.7138480000000005,45.743688,0.0 6.70578,45.73662,0.0 6.710587,45.73015,0.0 6.720715,45.727873,0.0 6.71814,45.716488,0.0 6.730328,45.713491,0.0 6.727238,45.708457,0.0 6.734104,45.697068,0.0 6.767235,45.727394,0.0 6.783543,45.740454,0.0 6.791611,45.746803,0.0 6.797619,45.741772000000005,0.0 6.798306,45.748241,0.0 6.80603,45.747282,0.0 6.844139,45.770397,0.0 6.860962,45.780933,0.0 6.874523,45.7777,0.0 6.903706,45.787637,0.0 6.931,45.808102000000005,0.0 6.950397,45.814563,0.0 6.964645,45.80547,0.0 6.972027,45.792784,0.0 6.963272,45.816956,0.0 6.964989,45.820306,0.0 6.98576,45.831909,0.0 7.012196,45.84470600000001,0.0 7.021809,45.850206,0.0 7.051678,45.871605,0.0 7.066441,45.88487000000001,0.0 7.079659,45.886902,0.0 7.085838,45.888813000000006,0.0 7.097683,45.889411,0.0 7.105923,45.895504,0.0 7.117081,45.896818,0.0 7.110558,45.905539000000005,0.0 7.10146,45.912347,0.0 7.104721,45.916408,0.0 7.098713000000001,45.932647,0.0 7.099915000000001,45.946495,0.0 7.111416,45.962248,0.0 7.114506,45.973583,0.0 7.125664,45.980979,0.0 7.125492,45.989567,0.0 7.127209,45.995769,0.0 7.125835,46.003162,0.0 7.126694,46.012343,0.0 7.133045,46.019138,0.0 7.127724,46.022118,0.0 7.121201,46.027482,0.0 7.115879,46.032726,0.0 7.092876,46.031415,0.0 7.086353,46.02915,0.0 7.077427,46.025694,0.0 7.07056,46.023191,0.0 7.062664,46.020092,0.0 7.053566,46.015204,0.0 7.0480730000000005,46.014251,0.0 7.043610000000001,46.012105,0.0 7.043653,46.012075,0.0 7.043610000000001,46.012194,0.0 7.043953,46.012224,0.0 7.043653,46.012045,0.0 7.043095,46.011866,0.0 7.041035,46.011151,0.0 7.035198,46.010316,0.0 7.033138,46.017946,0.0 7.028675,46.020569,0.0 7.015285,46.02927,0.0 7.000866,46.043093,0.0 7.002068,46.057628,0.0</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>Line 3</name>
+				<styleUrl>#line-0000FF-5-nodesc</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>7.002068,46.057509,0.0 6.999149,46.057866000000004,0.0 6.997776,46.044523,0.0 6.994858,46.055722,0.0 6.975975,46.071206,0.0 6.959152,46.059057,0.0 6.949024,46.052029,0.0 6.942673,46.050123,0.0 6.938553,46.041067,0.0 6.925678,46.027482,0.0 6.917953,46.021999,0.0 6.9207,46.012581,0.0 6.922073,46.004474,0.0 6.912975,46.005309,0.0 6.9104,46.000181,0.0 6.904049,45.995411,0.0 6.894093000000001,45.988017,0.0 6.886024000000001,45.976088,0.0 6.88139,45.962726,0.0 6.884136,45.942675,0.0</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>Placemark 2</name>
+				<description><![CDATA[Headling up from Les Contamines to the stunning Col du Bonhomme (http://www.tracks-and-trails.com/index.php/eng/Photos/Walking/Tour-du-Mont-Blanc/Col-du-Bonhomme)]]></description>
+				<styleUrl>#icon-67</styleUrl>
+				<Point>
+					<coordinates>6.709213,45.737818,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Placemark 11</name>
+				<description><![CDATA[Views of the Mont Blanc (http://www.tracks-and-trails.com/index.php/eng/Photos/Walking/Tour-du-Mont-Blanc/Lac-des-Cheserys) Massif on a glorious day.]]></description>
+				<styleUrl>#icon-67</styleUrl>
+				<Point>
+					<coordinates>6.887054,45.979787,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Placemark 4</name>
+				<description><![CDATA[Italian ice cream (http://www.tracks-and-trails.com/index.php/eng/Photos/Walking/Tour-du-Mont-Blanc/Courmayeur) in Courmayeur at the end of a long hot day in the mountains - to die for!]]></description>
+				<styleUrl>#icon-67</styleUrl>
+				<Point>
+					<coordinates>6.980438000000001,45.791467,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Placemark 5</name>
+				<description><![CDATA[Wildlife photo opportunity as a young Ibex (http://www.tracks-and-trails.com/index.php/eng/Photos/Walking/Tour-du-Mont-Blanc/Ibex) gets up close! A whole family were spotted as we crossed the Grand Col Ferret]]></description>
+				<styleUrl>#icon-177</styleUrl>
+				<Point>
+					<coordinates>7.086182,45.883317,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Placemark 6</name>
+				<description><![CDATA[One of the joys of the trip is walking through meadows of alpine flowers (http://www.tracks-and-trails.com/index.php/eng/Photos/Walking/Tour-du-Mont-Blanc/Trumpet-Gentian) with thier brilliant colours.]]></description>
+				<styleUrl>#icon-193</styleUrl>
+				<Point>
+					<coordinates>7.04155,46.011747,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Placemark 7</name>
+				<description><![CDATA[The stunning backdrop provided by Mont Blanc (http://www.tracks-and-trails.com/index.php/eng/Photos/Walking/Tour-du-Mont-Blanc/Mont-Blanc) or Monte Bianco if we happen to be talking Italian!!]]></description>
+				<styleUrl>#icon-177</styleUrl>
+				<Point>
+					<coordinates>6.865082000000001,45.832627,0.0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Style id='icon-163-normal'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/163-lightblue.png</href>
+				</Icon>
+				<hotSpot x='16' y='31' xunits='pixels' yunits='insetPixels'>
+				</hotSpot>
+			</IconStyle>
+			<LabelStyle>
+				<scale>0.0</scale>
+			</LabelStyle>
+		</Style>
+		<Style id='icon-163-highlight'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/163-lightblue.png</href>
+				</Icon>
+				<hotSpot x='16' y='31' xunits='pixels' yunits='insetPixels'>
+				</hotSpot>
+			</IconStyle>
+			<LabelStyle>
+				<scale>1.1</scale>
+			</LabelStyle>
+		</Style>
+		<StyleMap id='icon-163'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#icon-163-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#icon-163-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='icon-177-normal'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/177-camera.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>0.0</scale>
+			</LabelStyle>
+		</Style>
+		<Style id='icon-177-highlight'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/177-camera.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>1.1</scale>
+			</LabelStyle>
+		</Style>
+		<StyleMap id='icon-177'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#icon-177-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#icon-177-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='icon-193-normal'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/193-sunny.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>0.0</scale>
+			</LabelStyle>
+		</Style>
+		<Style id='icon-193-highlight'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/193-sunny.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>1.1</scale>
+			</LabelStyle>
+		</Style>
+		<StyleMap id='icon-193'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#icon-193-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#icon-193-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='icon-67-normal'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/67-hiker.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>0.0</scale>
+			</LabelStyle>
+		</Style>
+		<Style id='icon-67-highlight'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/67-hiker.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>1.1</scale>
+			</LabelStyle>
+		</Style>
+		<StyleMap id='icon-67'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#icon-67-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#icon-67-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='line-0000FF-5-nodesc-normal'>
+			<LineStyle>
+				<color>ffFF0000</color>
+				<width>5</width>
+			</LineStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<Style id='line-0000FF-5-nodesc-highlight'>
+			<LineStyle>
+				<color>ffFF0000</color>
+				<width>8.0</width>
+			</LineStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<StyleMap id='line-0000FF-5-nodesc'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#line-0000FF-5-nodesc-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#line-0000FF-5-nodesc-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+	</Document>
+</kml>

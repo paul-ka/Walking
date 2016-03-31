@@ -1,12 +1,12 @@
 // MAIN CONTROLLER
 function circuitController($scope, $http, circuitService) {
     $scope.title = "Circuits";
+    $scope.i = 1;
 
     function load() {
         circuitService.get().then(function (res) {
             $scope.circuits = res.data;
         })
-        $scope.i = 1;
         $scope.suivant = function () {
             debugger
             $scope.i += 1;
