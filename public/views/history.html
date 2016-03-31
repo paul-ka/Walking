@@ -1,18 +1,13 @@
 <main class="container main-frame" ng-init="init()">
     <div class="page-header">
-        <h1>AngularJS WeatherApp</h1>
+        <h1>Vos Circuits</h1>
     </div>
 
-    <noscript>
-        <article>
-            <div class="alert alert-danger">Javascript is disabled in your web browser. If you <a href="http://www.enable-javascript.com/">enable JavaScript</a>, this text will change.</div>
-        </article>
-    </noscript>
 
     <div class="hide-on-no-js">
         <!-- search form -->
         <form class="form-inline" ng-submit="submit()">
-            <input type="text" class="form-control input-lg" placeholder="Enter town or city" ng-model="loc">
+            <input type="text" class="form-control input-lg" placeholder="Entrer nom de ville" ng-model="loc">
         </form>
 
         <!-- ajax loader image -->
@@ -21,51 +16,119 @@
         <!-- weather report --->
         <article ng-show="status == 200 && data.cod == 200">
             <h2>
-						{{data.name}}, {{data.sys.country}}
-						<img ng-src="{{img}}" alt=" " class="pull-right">
+						{{data.city.name}}, {{data.city.country}}
 					</h2>
 
-            <table class="table table-striped">
+            <table class="table table-striped" style="width:300px; display:inline-block; text-align:center;">
+
                 <tbody>
                     <tr>
-                        <th>Weather</th>
-                        <td>{{data.weather[0]['main']}}</td>
+                        <h1>Aujourd'hui</h1>
+                        <th>Temps</th>
+                        <td>{{data.list[0].weather[0]['main']}} <img ng-src=" {{img}} " alt=""></td>
+
                     </tr>
                     <tr>
-                        <th>Temperature</th>
-                        <td>{{data.main.temp | customKelvinToCelsiusFilter | number:2}}&deg;C</td>
+                        <th>Température</th>
+                        <td>{{data.list[0].main.temp | customKelvinToCelsiusFilter | number:2}}&deg;C</td>
                     </tr>
                     <tr>
-                        <th>Humidity</th>
-                        <td>{{data.main.humidity}}%</td>
+                        <th>Humidité</th>
+                        <td>{{data.list[0].main.humidity}}%</td>
                     </tr>
                     <tr>
-                        <th>Wind</th>
-                        <td>{{data.wind.speed}}mps</td>
+                        <th>Vent</th>
+                        <td>{{data.list[0].wind.speed}}mps </td>
+                    </tr>
+                </tbody>
+
+                <tbody>
+                    <tr>
+                        <h1>Demain</h1>
+                        <th>Temps</th>
+                        <td>{{data.list[1].weather[0]['main']}} <img ng-src="{{img}} " alt=" " style="width:35px; margin-left:10px; "></td>
+
                     </tr>
                     <tr>
-                        <th>Sunrise</th>
-                        <td>{{data.sys.sunrise | customTimeFilter}}</td>
+                        <th>Température</th>
+                        <td>{{data.list[1].main.temp | customKelvinToCelsiusFilter | number:2}}&deg;C</td>
                     </tr>
                     <tr>
-                        <th>Sunset</th>
-                        <td>{{data.sys.sunset | customTimeFilter}}</td>
+                        <th>Humidité</th>
+                        <td>{{data.list[1].main.humidity}}%</td>
+                    </tr>
+                    <tr>
+                        <th>Vent</th>
+                        <td>{{data.list[1].wind.speed}}mps </td>
+                    </tr>
+                </tbody>
+                <h1>Après demain</h1>
+                <tbody>
+                    <tr>
+                        <th>Temps</th>
+                        <td>{{data.list[2].weather[0]['main']}} <img ng-src="{{img}} " alt=" " style="width:35px; margin-left:10px; "></td>
+
+                    </tr>
+                    <tr>
+                        <th>Température</th>
+                        <td>{{data.list[2].main.temp | customKelvinToCelsiusFilter | number:2}}&deg;C</td>
+                    </tr>
+                    <tr>
+                        <th>Humidité</th>
+                        <td>{{data.list[2].main.humidity}}%</td>
+                    </tr>
+                    <tr>
+                        <th>Vent</th>
+                        <td>{{data.list[2].wind.speed}}mps </td>
+                    </tr>
+                </tbody>
+                <h1>J+3</h1>
+                <tbody>
+                    <tr>
+                        <th>Temps</th>
+                        <td>{{data.list[3].weather[0]['main']}} <img ng-src="{{img}} " alt=" " style="width:35px; margin-left:10px; "></td>
+
+                    </tr>
+                    <tr>
+                        <th>Température</th>
+                        <td>{{data.list[3].main.temp | customKelvinToCelsiusFilter | number:2}}&deg;C</td>
+                    </tr>
+                    <tr>
+                        <th>Humidité</th>
+                        <td>{{data.list[3].main.humidity}}%</td>
+                    </tr>
+                    <tr>
+                        <th>Vent</th>
+                        <td>{{data.list[3].wind.speed}}mps </td>
+                    </tr>
+                </tbody>
+                <h1>J+4</h1>
+                <tbody>
+                    <tr>
+                        <th>Temps</th>
+                        <td>{{data.list[4].weather[0]['main']}} <img ng-src="{{img}} " alt=" " style="width:35px; margin-left:10px; "></td>
+
+                    </tr>
+                    <tr>
+                        <th>Température</th>
+                        <td>{{data.list[4].main.temp | customKelvinToCelsiusFilter | number:2}}&deg;C</td>
+                    </tr>
+                    <tr>
+                        <th>Humidité</th>
+                        <td>{{data.list[4].main.humidity}}%</td>
+                    </tr>
+                    <tr>
+                        <th>Vent</th>
+                        <td>{{data.list[4].wind.speed}}mps </td>
                     </tr>
                 </tbody>
             </table>
+
         </article>
 
-        <!-- location not found error message --->
-        <article ng-show="status == 200 && data.cod == 404">
-            <div class="alert alert-danger">{{data.message}}</div>
-        </article>
 
-        <!-- failed ajax request error message --->
-        <article ng-show="status == 0">
-            <div class="alert alert-danger">{{data}}</div>
-        </article>
 
         <!-- ajax response -->
-        <!-- <pre ng-show="data">{{data}}</pre> -->
+        <!-- <pre ng-show="data ">{{data}}</pre> -->
     </div>
 </main>
