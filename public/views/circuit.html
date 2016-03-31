@@ -1,8 +1,12 @@
 <h1>{{title}}</h1>
 <form class="form-inline">
 	<div class="form-group">
-		<input type="text" class="form-control" id="inputMessage" 
-			   placeholder="Your task" ng-model="description">
+		<input type="text" class="form-control" id="inputMessage" placeholder="Your task" ng-model="circuit.name">
+		<input type="text" class="form-control" id="inputMessage" placeholder="Your task" ng-model="circuit.place">
+		<input type="text" class="form-control" id="inputMessage" placeholder="Your task" ng-model="circuit.locomotion">
+		<input type="text" class="form-control" id="inputMessage" placeholder="Your task" ng-model="circuit.kml">
+		<input type="text" class="form-control" id="inputMessage" placeholder="Your task" ng-model="circuit.distance">
+		<input type="text" class="form-control" id="inputMessage" placeholder="Your task" ng-model="circuit.diffictulty">
 	</div>
 	<button type="submit" class="btn btn-default" ng-click="add()">Add</button>
 </form>
@@ -11,8 +15,7 @@
 	<li class="list-group-item" ng-repeat="circuit in circuits">
 		<form class="form-inline">
 			<div class="form-group">
-				<input type="text" class="form-control" id="inputMessage" 
-					   ng-model="circuit.description">
+				<input type="text" class="form-control" id="name" ng-model="circuit.name">
 			</div>
 			<div class="pull-right">
 				<button type="submit" class="btn btn-default" ng-click="update(circuit)">Update</button>
