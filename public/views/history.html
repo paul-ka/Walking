@@ -1,23 +1,71 @@
-<h1>{{title}}</h1>
-<form class="form-inline">
-	<div class="form-group">
-		<input type="text" class="form-control" id="inputMessage" 
-			   placeholder="Your task" ng-model="description">
-	</div>
-	<button type="submit" class="btn btn-default" ng-click="add()">Add</button>
-</form>
-<hr>
-<ul class="list-group">
-	<li class="list-group-item" ng-repeat="todo in todos">
-		<form class="form-inline">
-			<div class="form-group">
-				<input type="text" class="form-control" id="inputMessage" 
-					   ng-model="todo.description">
-			</div>
-			<div class="pull-right">
-				<button type="submit" class="btn btn-default" ng-click="update(todo)">Update</button>
-				<button type="submit" class="btn btn-danger" ng-click="delete(todo)">Delete</button>
-			</div>
-		</form>
-	</li>
-</ul>
+<main class="container main-frame" ng-init="init()">
+    <div class="page-header">
+        <h1>AngularJS WeatherApp</h1>
+    </div>
+
+    <noscript>
+        <article>
+            <div class="alert alert-danger">Javascript is disabled in your web browser. If you <a href="http://www.enable-javascript.com/">enable JavaScript</a>, this text will change.</div>
+        </article>
+    </noscript>
+
+    <div class="hide-on-no-js">
+        <!-- search form -->
+        <form class="form-inline" ng-submit="submit()">
+            <input type="text" class="form-control input-lg" placeholder="Enter town or city" ng-model="loc">
+        </form>
+
+        <!-- ajax loader image -->
+        <div ng-show="loader == 1" class="loader"><img src="img/ajax-loader.gif" alt=" "></div>
+
+        <!-- weather report --->
+        <article ng-show="status == 200 && data.cod == 200">
+            <h2>
+						{{data.name}}, {{data.sys.country}}
+						<img ng-src="{{img}}" alt=" " class="pull-right">
+					</h2>
+
+            <table class="table table-striped">
+                <tbody>
+                    <tr>
+                        <th>Weather</th>
+                        <td>{{data.weather[0]['main']}}</td>
+                    </tr>
+                    <tr>
+                        <th>Temperature</th>
+                        <td>{{data.main.temp | customKelvinToCelsiusFilter | number:2}}&deg;C</td>
+                    </tr>
+                    <tr>
+                        <th>Humidity</th>
+                        <td>{{data.main.humidity}}%</td>
+                    </tr>
+                    <tr>
+                        <th>Wind</th>
+                        <td>{{data.wind.speed}}mps</td>
+                    </tr>
+                    <tr>
+                        <th>Sunrise</th>
+                        <td>{{data.sys.sunrise | customTimeFilter}}</td>
+                    </tr>
+                    <tr>
+                        <th>Sunset</th>
+                        <td>{{data.sys.sunset | customTimeFilter}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+
+        <!-- location not found error message --->
+        <article ng-show="status == 200 && data.cod == 404">
+            <div class="alert alert-danger">{{data.message}}</div>
+        </article>
+
+        <!-- failed ajax request error message --->
+        <article ng-show="status == 0">
+            <div class="alert alert-danger">{{data}}</div>
+        </article>
+
+        <!-- ajax response -->
+        <!-- <pre ng-show="data">{{data}}</pre> -->
+    </div>
+</main>
