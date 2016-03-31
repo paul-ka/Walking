@@ -31,3 +31,11 @@ body{
 	transform: translateX(300px);
 }  
 
+#kml-zone{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+#kml-map {
+    height: 100%;
+}

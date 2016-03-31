@@ -12,6 +12,9 @@ function config($routeProvider) {
 			templateUrl: 'views/history.html'
 			controller: 'historyController'
 		})
+		.when('/kml', {
+			templateUrl: 'views/kml.html'
+		})
 		.otherwise({
 			redirectTo: '/'
 		});
