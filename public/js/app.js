@@ -19,6 +19,7 @@ function config($routeProvider) {
 		.otherwise({
 			redirectTo: '/'
 		});
+
 }
 
 function run($rootScope, $location) {

@@ -1,5 +1,6 @@
 // MAIN CONTROLLER
 function circuitController($scope, $http, circuitService) {
+
     $scope.title = "Circuits";
     $scope.i = 1;
 
@@ -42,3 +43,4 @@ function circuitController($scope, $http, circuitService) {
         load();
     }
 }
+
