@@ -1,12 +1,33 @@
 body{
-    padding-top: 70px;
+/*    padding-top: 70px;*/
+    background-image: url("/img/background.jpg");
+    background-size: cover;
+}
+
+
+.navbar{
+    display:list-item;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+    height: 100%; /* Full height */
+    position: fixed; /* Make it stick, even on scroll */
+    overflow: auto; /* Enable scrolling if the sidenav has too much content*/
+}
+
+.navcontainer{
+    width:auto;
 }
 .navbar-border{
-	border-bottom: 3px solid #F0DB4F;
+	border-bottom: 3px solid #03751e;
 }
+
 .navbar-header img{
-	transition: 0.4s;
+	transition: 5s;
 }
 .navbar-header img:hover{
-	transform: rotate(360deg);
+	transform: translateX(300px);
 }  
+
