@@ -40,6 +40,12 @@
                         <input type="text" class="form-control secondPart firsttitle firstChild" id="inputMessage" ng-model="walker.name" placeholder="Nom">
                         <input type="text" class="form-control secondPart firsttitle firstChild" id="inputMessage" ng-model="walker.email" placeholder="Email">
                         <input type="text" class="form-control secondPart firsttitle firstChild" id="inputMessage" ng-model="walker.phone" placeholder="Téléphone">
+                        <select ng-model="walker.experience" class="form-control"> 
+                            <option value=""disabled selected hidden> Experience </option>
+                            <option value="Occasionel">Occasionel</option>
+                            <option value="Habitué">Habitué</option>
+                            <option value="Sportif">Sportif</option>
+                        </select>
                     </div>
                     <form>
                         <input class="parcourir" type='file' ng-model='walker.imageFile' base-sixty-four-input onchange="angular.element(this).scope().previewFile(this)">
@@ -59,7 +65,7 @@
 
 <!-- Liste des amis-->
 <div class="row"></div>
-<ul class="list-group">
+<ul class="list-group" col-md-6>
     <li class="list-group-item" ng-repeat="walker in walkers | filter:{name: query} | orderBy:order">
         <form class=" form-inline">
             <div class="form-group secondForm">
@@ -68,6 +74,7 @@
                     <input type="text" class="form-control secondPart firsttitle firstChild" id="inputMessage" ng-model="walker.name" placeholder="Prénom">
                     <input type="text" class="form-control secondPart firsttitle firstChild" id="inputMessage" ng-model="walker.email" placeholder="Email">
                     <input type="text" class="form-control secondPart firsttitle firstChild" id="inputMessage" ng-model="walker.phone" placeholder="Téléphone">
+                    <input type="text" class="form-control secondPart firsttitle firstChild" id="inputMessage" ng-model="walker.experience" placeholder="Experience">
                 </div>
                 <button type="submit" class="btn btn-default addbutton1" ng-click="update(walker)">Mettre à jour</button>
                 <button type="submit" class="btn btn-danger" ng-click="delete(walker)">X</button>
