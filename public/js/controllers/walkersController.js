@@ -2,14 +2,14 @@
 function walkersController($scope, $http, walkersService) {
     $scope.title = "Les amis";
     $scope.walker = {};
-    
+
     function load() {
         walkersService.get().then(function (res) {
             $scope.walkers = res.data;
         });
 
     }
-    
+
 
     $scope.add = function () {
         walkersService.create($scope.walker).then(function (res) {

@@ -2,16 +2,16 @@
 function circuitService($http) {
     return {
         get : function() {
-            return $http.get('/circuit');
+            return $http.get('/');
         },
         update : function(id, data){
-            return $http.put('/circuit/' + id, data);
+            return $http.put('/' + id, data);
         },
         create : function(data) {
-            return $http.post('/circuit', data);
+            return $http.post('/', data);
         },
         delete : function(id) {
-            return $http.delete('/circuit/' + id);
+            return $http.delete('/' + id);
         }
     }
 };

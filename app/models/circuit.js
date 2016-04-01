@@ -4,11 +4,18 @@ var mongoose = require('mongoose');
 
 var circuitSchema = new mongoose.Schema({
     name: String,
+    date: String,
     place: String,
     locomotion: String,
     kml: String,
     distance: String,
-    diffictulty: String
+    experience: String,
+    feet: String,
+    bike: String,
+    occasionnel: String,
+    habitue: String,
+    sportif: String
+
 });
 
 var Circuit = {
@@ -28,14 +35,7 @@ var Circuit = {
     },
 
     update: function (req, res) {
-        Circuit.model.findByIdAndUpdate(req.params.id, {
-            name: req.body.name,
-            place: req.body.place,
-            locomotion: req.body.locomotion,
-            kml: req.body.kml,
-            distance: req.body.distance,
-            diffictulty: req.body.diffictulty
-        }, function () {
+        Circuit.model.findByIdAndUpdate(req.params.id, req.body, function () {
             res.sendStatus(200);
         })
     },

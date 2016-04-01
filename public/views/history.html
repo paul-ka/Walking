@@ -17,7 +17,7 @@
             </div>
             <div class="modal-body" ng-if="i==1">
                 <div class="row">
-                    <select ng-model="inputInvite" class="form-control">
+                    <select ng-model="id_circuit" class="form-control">
                         <option ng-repeat="circuit in circuits" value="{{circuit._id}}">
                             {{circuit.name}}
                         </option>
@@ -26,7 +26,7 @@
             </div>
             <div class="modal-body" ng-if="i==2">
                 <div class="row">
-                    <select ng-model="inputInvite" class="form-control">
+                    <select ng-model="histowalker" class="form-control">
                         <option ng-repeat="walker in walkers" value="{{walker._id}}">
                             {{walker.name}}
                         </option>
