@@ -15,24 +15,34 @@ function circuitController($scope, $http, circuitService) {
         circuitService.get().then(function (res) {
             $scope.circuits = res.data;
         });
-        walkersService.get().then(function (res) {
-            $scope.walkers = res.data;
-        })
         $scope.addToCircuitsWalkers = function (Walker) {}
 
         $scope.add = function () {
             var data = {};
             data.name = $scope.name;
+            data.date = $scope.date;
             data.place = $scope.place;
+            data.feet = $scope.feet;
+            data.bike = $scope.bike;
             data.locomotion = $scope.locomotion;
+            data.occasionnel = $scope.occasionnel;
+            data.habitue = $scope.habitue;
+            data.sportif = $scope.sportif;
             data.kml = $scope.kml;
             data.distance = $scope.distance;
-            data.difficulty = $scope.difficulty;
+            data.experience = $scope.experience;
             circuitService.create(data).then(function (res) {
                 load();
             });
             $scope.description = "";
             $scope.name = "";
+            $scope.date = "";
+            $scope.feet = "";
+            $scope.bike = "";
+            $scope.kml = "";
+            $scope.occasionnel = "";
+            $scope.habitue = "";
+            $scope.sportif = "";
         }
         $scope.update = function (circuit) {
             circuitService.update(circuit._id, circuit).then(function (res) {
