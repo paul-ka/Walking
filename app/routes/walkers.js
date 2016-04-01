@@ -1,4 +1,4 @@
-// ROUTES TODOS
+
 var Walkers = require('../models/walkers.js');
 module.exports 	= function(app) {
 

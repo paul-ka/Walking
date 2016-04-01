@@ -1,32 +1,11 @@
 <h1>{{title}}</h1>
-
 <div class="header">
-
 </div>
-
-
 <div class="container">
-    <!--    <div class="row" style="text-align:center;">-->
-    <div class="row">
-        <div class="addWalkersField">
+      <div class="addWalkersField">
             <button type="button" class="btn btn-info btn-lg modal-add-btn" data-toggle="modal" data-target="#myModal">Ajouter un ami</button>
         </div>
-        <div class="walkers-field">
-            <h2> Chercher un ami</h2>
-            <div class="searchingwalkers">
-                <input class="searchInput" type="text" ng-model="query" placeholder="Entrer nom d'ami" />
-                <!--
-                <select ng-model="order" class="orderBy" style="color:black;">
-                    <option value="" disabled selected hidden>Trier par</option>
-                    <option value="name">Organiser par nom</option>
-                    <option value="name">Organiser par date</option>
-                </select>
--->
-            </div>
-        </div>
     </div>
-</div>
-
 <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
@@ -40,6 +19,12 @@
                         <input type="text" class="form-control secondPart firsttitle firstChild" id="inputMessage" ng-model="walker.name" placeholder="Nom">
                         <input type="text" class="form-control secondPart firsttitle firstChild" id="inputMessage" ng-model="walker.email" placeholder="Email">
                         <input type="text" class="form-control secondPart firsttitle firstChild" id="inputMessage" ng-model="walker.phone" placeholder="Téléphone">
+                        <select ng-model="walker.experience" class="form-control"> 
+                            <option value=""disabled selected hidden> Experience </option>
+                            <option value="Occasionel">Occasionel</option>
+                            <option value="Habitué">Habitué</option>
+                            <option value="Sportif">Sportif</option>
+                        </select>
                     </div>
                     <form>
                         <input class="parcourir" type='file' ng-model='walker.imageFile' base-sixty-four-input onchange="angular.element(this).scope().previewFile(this)">
@@ -56,18 +41,21 @@
 </div>
 <br>
 <br>
-
-<!-- Liste des amis-->
-<div class="row"></div>
-<ul class="list-group">
+<ul class="list-group" col-md-6>
     <li class="list-group-item" ng-repeat="walker in walkers | filter:{name: query} | orderBy:order">
         <form class=" form-inline">
             <div class="form-group secondForm">
                 <img class="imgAdd" src="{{walker.imageFile || 'img/logo.png'}}" />
                 <div class="listInput">
-                    <input type="text" class="form-control secondPart firsttitle firstChild" id="inputMessage" ng-model="walker.name" placeholder="Prénom">
-                    <input type="text" class="form-control secondPart firsttitle firstChild" id="inputMessage" ng-model="walker.email" placeholder="Email">
-                    <input type="text" class="form-control secondPart firsttitle firstChild" id="inputMessage" ng-model="walker.phone" placeholder="Téléphone">
+                    <input type="text" class="form-control" id="inputMessage" ng-model="walker.name" placeholder="Prénom">
+                    <input type="text" class="form-control" id="inputMessage" ng-model="walker.email" placeholder="Email">
+                    <input type="text" class="form-control" id="inputMessage" ng-model="walker.phone" placeholder="Téléphone">
+                     <select ng-model="walker.experience" class="form-control"> 
+                            <option value=""disabled selected hidden> Experience </option>
+                            <option value="Occasionel">Occasionel</option>
+                            <option value="Habitué">Habitué</option>
+                            <option value="Sportif">Sportif</option>
+                      </select>
                 </div>
                 <button type="submit" class="btn btn-default addbutton1" ng-click="update(walker)">Mettre à jour</button>
                 <button type="submit" class="btn btn-danger" ng-click="delete(walker)">X</button>
@@ -76,37 +64,3 @@
         </form>
     </li>
 </ul>
-
-
-<!--
- Modale fiche amis
-<div class="modal fade" ng-repeat="walker in walkers | filter: {description: query} | orderBy:order" id="{{walkers._id}}" role="dialog">
-    <div class="modal-dialog modal-lg hmm">
-        <div class="modal-contentwalkers" style="text-align:center;">
-            <div class="modal-header2" ng-style="{'background-image':'url({{walkers.image || 'img/logo.png'}})'}">
-                <h2 class="modal-title2">{{walkers.name}}</h2>
-            </div>
-            <div class="modal-body">
-                <ul class="ingList2">
-                    <li> 
-                <div class="row subPart">
-                    <h3>Changer le nom</h3>
-               
-                    <input type="text" class="walkers-form-control" id="walkersinputMessage" ng-model="walkers.name">
-                </div>
-                <div class="row subPart">
-                    <h3>Commentaires</h3>
-                    <input type="text" class="walkers-form-control" id="walkersinputMessage" ng-model="walkers.commentaires">
-                </div>
-                <div class="row subPart">
-                    <h3>date</h3>
-                    <input type="text" class="walkers-form-control" id="walkersinputMessage" ng-model="walkers.date">
-                </div>
-            </div>
-        </div>
-        <div class="modal-footer2" style="text-align:right;">
-            <button type="submit" class="btn btn-default addbutton" ng-click="update(walkers)" data-dismiss="modal">Mettre à jour</button>
-            <button type="button" class="btn btn-default closebutton" data-dismiss="modal">Fermer</button>
-        </div>
-    </div>
-</div>-->

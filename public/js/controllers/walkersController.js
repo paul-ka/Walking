@@ -8,8 +8,7 @@ function walkersController($scope, $http, walkersService) {
             $scope.walkers = res.data;
         });
 
-    }
-
+    }    
 
     $scope.add = function () {
         walkersService.create($scope.walker).then(function (res) {
