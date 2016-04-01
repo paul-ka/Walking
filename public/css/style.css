@@ -50,34 +50,55 @@ body{
     text-align: center;    
 }
 
+.addWalkersField{
+    margin:20px;
+}
 
 
 .list-group-item{
     display: inline-flex;
     background-color: rgba(36,36,36, 0.8); 
-    width: 300px;
+    width: 250px;
     height: 400px;
     margin: 10px;
     border-radius: 5px 5px 5px 5px;
     text-align: center;
     padding: 15px;
 }
+
+.modal-content{
+    background-color: rgba(36,36,36, 0.8); 
+    width: 300px;
+    height: 450px;
+    margin: 10px;
+    border-radius: 5px 5px 5px 5px;
+    text-align: center;
+    padding: 15px;  
+    border: solid 1px;
+}
+#preview{
+    height: 100px;
+    margin: 10px;
+}
 .imgAdd{
-    height: 175px;
+    height: 190px;
+    margin: 10px;
 }
    
-/*
-    border-radius: 5px 10px 10px 5px;
-    padding: 20px;
+.form-control{
+    width: 190px!important;
+     background-color: rgba(36,36,36, 0.8);
     color: white;
-*/
+    
 }
 
+/*
 .form-inline{
     background-color: rgba(36,36,36, 0.8); 
     padding: 0 auto;
     position: absolute;
 }
+*/
 
 
 #kml-zone{
@@ -107,7 +128,9 @@ body{
     }
     
 .row{
-       width:800px; 
+    width:800px;
+    margin: none;
+        
     }
     
 

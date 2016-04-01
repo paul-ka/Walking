@@ -7,9 +7,7 @@ function walkersController($scope, $http, walkersService) {
         walkersService.get().then(function (res) {
             $scope.walkers = res.data;
         });
-
-    }
-    
+    }    
 
     $scope.add = function () {
         walkersService.create($scope.walker).then(function (res) {
