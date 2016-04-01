@@ -114,3 +114,13 @@ body{
 #kml-zone-map {
     height: 600px;
 }
+
+#weather{
+    width:900px; 
+    display:inline-block; 
+    text-align:center;
+    color : black;
+}
+#weather td{
+    width:20%
+}

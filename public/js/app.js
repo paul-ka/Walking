@@ -16,6 +16,10 @@ function config($routeProvider) {
 			templateUrl: 'views/kml.html',
 			controller: 'kmlController'
 		})
+        .when('/weather', {
+            templateUrl: 'views/weather.html',
+            controller: 'weatherController'
+        })
 		.otherwise({
 			redirectTo: '/'
 		});
@@ -35,6 +39,7 @@ angular.module('app', ['ngRoute', 'ngMap'])
     .controller('circuitController', circuitController)
     .controller('walkersController', walkersController)
     .controller('historyController', historyController)
+    .controller('weatherController', weatherController)
     .controller('kmlController', kmlController)
     .service('circuitService', circuitService)
     .service('walkersService', walkersService)
