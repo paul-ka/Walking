@@ -1,19 +1,24 @@
 // MAIN CONTROLLER
 function circuitController($scope, $http, circuitService) {
     $scope.title = "Circuits";
+    $scope.walkers = [];
+    $scope.i = 1;
+    $scope.suivant = function () {
+
+        $scope.i += 1;
+    }
+    $scope.precedent = function () {
+        $scope.i -= 1;
+    }
 
     function load() {
         circuitService.get().then(function (res) {
             $scope.circuits = res.data;
+        });
+        walkersService.get().then(function (res) {
+            $scope.walkers = res.data;
         })
-        $scope.i = 1;
-        $scope.suivant = function () {
-            debugger
-            $scope.i += 1;
-        }
-        $scope.precedent = function () {
-            $scope.i -= 1;
-        }
+        $scope.addToCircuitsWalkers = function (Walker) {}
 
         $scope.add = function () {
             var data = {};
