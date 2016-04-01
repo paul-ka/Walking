@@ -79,6 +79,10 @@ body {
     padding: 15px;  
     border: solid 1px;
 }
+.modal-dialog{
+    width: 300px;
+   
+}
 #preview{
     height: 100px;
     margin: 10px;
@@ -89,8 +93,8 @@ body {
 }
    
 .form-control{
-    width: 190px!important;
-     background-color: rgba(36,36,36, 0.8);
+    width: 190px;
+    background-color: rgba(36,36,36, 0.8);
     color: white;
     
 }
@@ -147,7 +151,7 @@ body {
 }
     
 .row{
-    width:800px;
+    width:300px;
     margin: none;
         
 }
@@ -160,9 +164,6 @@ body {
 }
 #weather td{
     width:20%
-}
-.row {
-    width: 800px;
 }
 #kml-zone-map {
     height: 600px;

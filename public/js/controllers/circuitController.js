@@ -3,7 +3,7 @@ function circuitController($scope, $http, circuitService) {
 
     $scope.title = "Circuits";
 
-    $scope.walkers = [];
+    $scope.circuit = {};
     $scope.i = 1;
     $scope.suivant = function () {
 
@@ -35,6 +35,7 @@ function circuitController($scope, $http, circuitService) {
         data.kml = $scope.kml;
         data.distance = $scope.distance;
         data.experience = $scope.experience;
+        alert($scope.name);
         circuitService.create(data).then(function (res) {
             load();
         });

@@ -19,7 +19,7 @@ function weatherController($scope, $http) {
         $scope.status = null;
 
         // fire ajax request to get weather report for selected location
-        $http.get('http://api.openweathermap.org/data/2.5/forecast?q=' + $scope.loc) //+ '&appid=a9bfa08d7c9a72603190225b4f255c70')
+        $http.get('http://api.openweathermap.org/data/2.5/forecast?q=' + $scope.loc + '&appid=a9bfa08d7c9a72603190225b4f255c70')
 
         // the ajax request was successful
         .success(function (data, status) {

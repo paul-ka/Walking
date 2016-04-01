@@ -2,9 +2,9 @@
 var Circuit = require('../models/circuit.js');
 module.exports 	= function(app) {
 
-	app.get('/', Circuit.findAll);
-	app.post('/', Circuit.create);
-	app.put('/:id', Circuit.update);
-	app.delete('/:id', Circuit.delete);
+	app.get('/circuit', Circuit.findAll);
+	app.post('/circuit', Circuit.create);
+	app.put('/circuit:id', Circuit.update);
+	app.delete('/circuit:id', Circuit.delete);
     
 }

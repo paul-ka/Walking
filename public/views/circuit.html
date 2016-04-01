@@ -17,9 +17,9 @@
             </div>
             <div class="modal-body bip" ng-if="i==1">
                 <div class="row">
-                    <h3>Information sur la sortie</h3>
-                    <input type="text" class="form-control" id="inputMessage" placeholder="Titre" ng-model="name" required>
-                    <input type="text" class="control" id="inputMessage" placeholder="Date de la sortie" ng-model="date" required>
+                    <h4>Information sur la sortie</h4>
+                    <input type="text" class="form-control" placeholder="Titre" ng-model="name" required>
+                    <input type="text" class="form-control" placeholder="Date de la sortie" ng-model="date" required>
                 </div>
 
             </div>
@@ -28,12 +28,12 @@
                     <label for="s-move">Vous vous déplacez...</label>
                     <div class="radio">
                         <label>
-                            <input type="radio" name="feetorbike" value="feet" required="required" ng-model="feet" ng-click="add()" />A pied
+                            <input type="radio" name="feetorbike" value="feet" required="required" ng-model="feet" />A pied
                         </label>
                     </div>
                     <div class="radio">
                         <label>
-                            <input type="radio" name="feetorbike" value="bike" required="required" ng-model="bike" ng-click="add()" />En vélo
+                            <input type="radio" name="feetorbike" value="bike" required="required" ng-model="bike" />En vélo
                         </label>
                     </div>
                 </div>
@@ -47,7 +47,6 @@
 
                                 <!-- Select Basic -->
                                 <div class="form-group">
-                                    <label class="col-md-4 control-label" for="selectbasic"></label>
                                     <div class="col-md-4">
                                         <select id="selectbasic" name="selectbasic" class="form-control">
                                             <option value="occasionnel">Occasionnel</option>
@@ -71,10 +70,10 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-danger" ng-click="precedent(i)" style="float:right;" ng-hide="i==1">Précédent</button>
-                <button class="btn btn-default" ng-click="suivant(i)" style="float:right;" ng-hide="i==2; i==3; i==4">Suivant</button>
-                <button type="submit" class="btn btn-default" ng-click="add()" style="float:right;" data-dismiss="modal">Valider</button>
-                <button type="submit" class="btn btn-danger" data-dismiss="modal" style="float:right;">Annuler</button>
+                <button class="btn btn-danger" ng-click="precedent(i)" ng-hide="i==1">Précédent</button>
+                <button class="btn btn-default" ng-click="suivant(i)"  ng-hide="i==2; i==3; i==4">Suivant</button>
+                <button type="submit" class="btn btn-default" ng-click="add();i=1"  data-dismiss="modal">Valider</button>
+                <button type="submit" class="btn btn-danger" data-dismiss="modal" ng-click="i=1">Annuler</button>
             </div>
         </div>
     </div>
@@ -85,12 +84,13 @@
     <li class="list-group-item" ng-repeat="circuit in circuits">
         <form class="form-inline">
             <div class="form-group">
-                <input type="text" class="form-control" id="name" ng-model="circuit.name">
-                <input type="text" class="form-control" id="name" ng-model="circuit.date">
+                <input type="text" class="form-control" id="name" ng-model="name">
+                <input type="text" class="form-control" id="name" ng-model="date">
             </div>
             <div class="pull-right">
                 <button type="submit" class="btn btn-default" ng-click="update(circuit)">Update</button>
                 <button type="submit" class="btn btn-danger" ng-click="delete(circuit)">Delete</button>
+                <a href="/#/kml" class="button btn btn-default">Voir L'itinéraire</a>
             </div>
         </form>
     </li>
