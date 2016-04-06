@@ -1,28 +1,28 @@
 function config($routeProvider) {
-	$routeProvider
-		.when('/', {
-			templateUrl: 'views/circuit.html',
-			controller: 'circuitController'
-		})
-		.when('/walkers', {
-			templateUrl: 'views/walkers.html',
-			controller: 'walkersController'
-		})
-		.when('/history', {
-			templateUrl: 'views/history.html',
-			controller: 'historyController'
-		})
-		.when('/kml', {
-			templateUrl: 'views/kml.html',
-			controller: 'kmlController'
-		})
-        .when('/weather', {
+    $routeProvider
+        .when('/', {
             templateUrl: 'views/weather.html',
-            controller: 'weatherController'
+            controller: 'circuitController'
         })
-		.otherwise({
-			redirectTo: '/'
-		});
+        .when('/walkers', {
+            templateUrl: 'views/walkers.html',
+            controller: 'walkersController'
+        })
+        .when('/history', {
+            templateUrl: 'views/history.html',
+            controller: 'historyController'
+        })
+        .when('/kml', {
+            templateUrl: 'views/kml.html',
+            controller: 'kmlController'
+        })
+        .when('/circuits', {
+            templateUrl: 'views/circuit.html',
+            controller: 'circuitController'
+        })
+        .otherwise({
+            redirectTo: '/'
+        });
 }
 
 function run($rootScope, $location) {

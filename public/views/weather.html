@@ -1,66 +1,15 @@
-<main class="container main-frame" ng-init="init()">
-    <div class="page-header">
-        <h1>Météo</h1>
-    </div>
+<img class="heart" src="../img/heart.png">
+<div class="container welcome">
+    <img class="logo" src="../img/logo.png">
+    <img class="logo2" src="../img/logo2.png">
+    <h1>Welcome in <span class="appName">SunWalk!</span></h1>
+</div>
 
 
-    <div class="hide-on-no-js">
-        <!-- search form -->
-        <form class="form-inline" ng-submit="submit()">
-            <input type="text" class="form-control input-lg" placeholder="Entrer nom de ville" ng-model="loc">
-        </form>
+<p class="presentation">This apps has been developped for people who like :</p>
 
-        <!-- ajax loader image -->
-        <div ng-show="loader == 1" class="loader"><img src="img/ajax-loader.gif" alt=" "></div>
-
-        <!-- weather report -->
-        <article ng-show="status == 200 && data.cod == 200">
-            <h2>
-						{{data.city.name}}, {{data.city.country}}
-					</h2>
-
-            <table class="table table-striped" id="weather">
-
-                <tbody>
-                    <tr>
-                        <td><h2>Aujourd'hui</h2></td><td><h2>Demain</h2></td><td><h2>J+2</h2></td><td><h2>J+3</h2></td><td><h2>J+4</h2></td>
-                    </tr>
-                    <tr>                        
-                        <td>{{data.list[0].weather[0]['main']}} <img ng-src=" {{img}} " alt=""></td>
-                        <td>{{data.list[1].weather[0]['main']}} <img ng-src="{{img}} " alt=" " style="width:35px; margin-left:10px; "></td>
-                        <td>{{data.list[2].weather[0]['main']}} <img ng-src="{{img}} " alt=" " style="width:35px; margin-left:10px; "></td>
-                        <td>{{data.list[3].weather[0]['main']}} <img ng-src="{{img}} " alt=" " style="width:35px; margin-left:10px; "></td>
-                        <td>{{data.list[4].weather[0]['main']}} <img ng-src="{{img}} " alt=" " style="width:35px; margin-left:10px; "></td>
-                    </tr>
-                    <tr>
-                        <td>{{data.list[0].main.temp | customKelvinToCelsiusFilter | number:2}}&deg;C</td>
-                        <td>{{data.list[1].main.temp | customKelvinToCelsiusFilter | number:2}}&deg;C</td>
-                        <td>{{data.list[2].main.temp | customKelvinToCelsiusFilter | number:2}}&deg;C</td>
-                        <td>{{data.list[3].main.temp | customKelvinToCelsiusFilter | number:2}}&deg;C</td>
-                        <td>{{data.list[4].main.temp | customKelvinToCelsiusFilter | number:2}}&deg;C</td>
-                    </tr>
-                    <tr>
-                        <td>{{data.list[0].main.humidity}}%</td>
-                        <td>{{data.list[1].main.humidity}}%</td>
-                        <td>{{data.list[2].main.humidity}}%</td>
-                        <td>{{data.list[3].main.humidity}}%</td>
-                        <td>{{data.list[4].main.humidity}}%</td>
-                   </tr>
-                    <tr>
-                        <td>{{data.list[0].wind.speed}}mps </td>
-                        <td>{{data.list[1].wind.speed}}mps </td>
-                        <td>{{data.list[2].wind.speed}}mps </td>
-                        <td>{{data.list[3].wind.speed}}mps </td>
-                        <td>{{data.list[4].wind.speed}}mps </td>
-                    </tr>
-                </tbody>
-            </table>
-
-        </article>
-
-
-
-        <!-- ajax response -->
-        <!-- <pre ng-show="data ">{{data}}</pre> -->
-    </div>
-</main>
+<div class="Three">
+    <p class="presentation hiking">Hiking</p>
+    <p class="presentation friends">+ Friends</p>
+    <p class="presentation both">= <span class="hikColor">Hiking</span> with <span class="friendColor">friends</span></p>
+</div>

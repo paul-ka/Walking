@@ -1,11 +1,9 @@
-
-<h1 style="margin-left:180px;">{{title}}</h1>
-<!-- Bouton ajout de soirée -->
-<div class="addSomething" class=" col-md-6">
-    <h2>Ajouter un circuit</h2>
-
-    <button type="button" class="btn btn-info btn-lg modal-add-btn" data-toggle="modal" data-target="#myModal">Ajouter</button>
+<div class="adding">
+    <div class="addSomething">
+        <button type="button" class="btn btn-info btn-lg modal-add-btn" data-toggle="modal" data-target="#myModal">Add a circuit</button>
+    </div>
 </div>
+
 
 <div style="margin-left: 180px;" class="modal fade" id="myModal" role="dialog">
 
@@ -71,8 +69,8 @@
             </div>
             <div class="modal-footer">
                 <button class="btn btn-danger" ng-click="precedent(i)" ng-hide="i==1">Précédent</button>
-                <button class="btn btn-default" ng-click="suivant(i)"  ng-hide="i==2; i==3; i==4">Suivant</button>
-                <button type="submit" class="btn btn-default" ng-click="add();i=1"  data-dismiss="modal">Valider</button>
+                <button class="btn btn-default" ng-click="suivant(i)" ng-hide="i==2; i==3; i==4">Suivant</button>
+                <button type="submit" class="btn btn-default" ng-click="add();i=1" data-dismiss="modal">Valider</button>
                 <button type="submit" class="btn btn-danger" data-dismiss="modal" ng-click="i=1">Annuler</button>
             </div>
         </div>
